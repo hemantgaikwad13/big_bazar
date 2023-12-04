@@ -1,5 +1,5 @@
 .product-container{
-    display: block;
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }

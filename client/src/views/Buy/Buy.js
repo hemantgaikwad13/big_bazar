@@ -36,6 +36,7 @@ export default function Buy() {
 
     useEffect(() => {
         checkLogin();
+        // eslint-disable-next-line
         loadProduct();
 
         const user = JSON.parse(localStorage.getItem("user"));

@@ -6,7 +6,7 @@ import { checkLogin } from '../../utils/auth';
 
 function Home() {
   const [products, setProducts] = useState([]);
-  
+
   const loadProducts = async () => {
     try {
       const response = await axios.get("/products");
@@ -15,7 +15,8 @@ function Home() {
     } catch (err) {
       console.log(err);
       alert("error loading products");
-    }}
+    }
+  }
 
   useEffect(() => {
     checkLogin();
