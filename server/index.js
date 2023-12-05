@@ -179,7 +179,7 @@ app.post("/order", async (req, res) => {
 app.get("/orders", async (req, res) => {
     const { id } = req.query;
 
-    const orders = await Order.find({ usr: id }).populate("product user");
+    const orders = await Order.find({ user: id }).populate("product user");
     res.json({
         success: true,
         data: orders,
