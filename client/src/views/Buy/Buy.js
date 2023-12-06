@@ -4,8 +4,10 @@ import { checkLogin } from '../../utils/auth';
 import './Buy.css';
 import axios from 'axios';
 
-import ImgInc from "./inc.png"
-import ImgDec from "./dec.png"
+import ImgInc from "./inc.png";
+import ImgDec from "./dec.png";
+import Navbar from '../../components/Navbar/navbar';
+import Footer from '../../components/Footer/Footer';
 
 export default function Buy() {
     const { id } = useParams();
@@ -57,6 +59,7 @@ export default function Buy() {
 
     return (
         <div>
+            <Navbar/>
             <div className='buy-container'>
                 <img src={product.image} className='buy-product-image' alt=" "/>
                 <div>
@@ -89,6 +92,7 @@ export default function Buy() {
                     </button>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

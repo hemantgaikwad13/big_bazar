@@ -3,6 +3,8 @@ import "./Home.css";
 import axios from 'axios';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { checkLogin } from '../../utils/auth';
+import Navbar from '../../components/Navbar/navbar';
+import Footer from '../../components/Footer/Footer';
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -25,6 +27,7 @@ function Home() {
 
   return (
     <div>
+      <Navbar/>
       <h1 className='text-center'>All Products</h1>
       <div className='product-container'>
         {products?.map((product, index) => {
@@ -33,6 +36,7 @@ function Home() {
           return (<ProductCard key={index} id={_id} name={name} price={price} description={description} image={image} />)
         })
         }
+        <Footer/>
       </div>
     </div>
   )

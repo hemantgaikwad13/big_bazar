@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import "./MyOrder.css"
+import Navbar from '../../components/Navbar/navbar';
+import Footer from '../../components/Footer/Footer';
 
 function MyOrder() {
   const [orders, setOrders] = useState([]);
@@ -19,6 +21,7 @@ function MyOrder() {
 
   return (
     <div>
+      <Navbar/>
       <h1 className='text-center'>My Orders</h1>
 
       {
@@ -33,6 +36,7 @@ function MyOrder() {
           </div>)
         })
       }
+      <Footer/>
     </div>
   )
 }
